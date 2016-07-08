@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bundled JavaScript Apps</title>
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <style>
+    .reveal code {
+      font-family: 'Fira Code', monospace;
+      color: gray;
+    }
+    .reveal section img {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown>
+        ## Bundled JavaScript Apps
+        (in APM)
+      </section>
+
+      <section data-markdown>
+        ### Rails & Asset Pipeline
+        ![](rails.png)
+      </section>
+
+      <section data-markdown>
+        ### Rails & Asset Pipeline
+        
+        For each page...
+        - Combines Data & Template into HTML
+        - Combines JS/CoffeeScript/+ into JS
+        - Combines CSS/SCSS/+ into CSS
+      </section>
+
+      <section data-markdown>
+        ### Rails & Asset Pipeline
+        ![](rails.png)
+      </section>
+
+      <section data-markdown>
+        ### ES6 Support
+        ![](es6.png)
+      </section>
+
+      <section data-markdown>
+        ## 👍 
+        Great solution for adding ES6 language and module support to existing pages
+
+        (And moving away from CoffeeScript and AMD)
+      </section>
+
+      <section data-markdown>
+        ### Bundled JS Apps
+        ![](bundle.png)
+        #### (aka Single Page Applications)
+      </section>
+      
+      <section data-markdown>
+        ### Like the asset pipeline... 
+        It's a way to combine, translate, and deliver script and style assets
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ### Unlike the asset pipeline... 
+            - Bundling is done outside Rails at development/build time <!-- .element: class="fragment" data-fragment-index="0" -->
+            - Server/Platform agnostic (Rails/Node.js/Java/CDN/+) <!-- .element: class="fragment" data-fragment-index="1" -->
+            - Manages its own templates, styles, and scripts dynamically from JS <!-- .element: class="fragment" data-fragment-index="2" -->
+            - Manages its own data, typically using API calls <!-- .element: class="fragment" data-fragment-index="3" -->
+            - In general, handles most UI and application state on the client <!-- .element: class="fragment" data-fragment-index="4" -->
+        </script>
+      </section>
+
+      <section data-markdown>
+        ![](bundle2.png)
+      </section>
+
+      <section>
+        <a href="http://localhost:3333/" target="_blank">Example</a>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ### Current Technology 
+          ### Fad`^n^n^n` Trends
+          - Node.js/npm - Scripting and package dependencies <!-- .element: class="fragment" data-fragment-index="0" -->
+          - Babel/Bublé - JS/ES2015 transpiling <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Webpack/Browserify/Rollup - Bundling and loading <!-- .element: class="fragment" data-fragment-index="2" -->
+        </script>
+      </section>
+
+      <section data-markdown>
+        ### Node.js
+        ![](v8-ad.jpg)
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ### Node.js
+          - Package management 
+            <br>`npm install ...` <!-- .element: class="fragment" data-fragment-index="0" -->
+          - Script runner 
+            <br>`npm run ...` <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Testing hooks 
+            <br>`npm test ...` <!-- .element: class="fragment" data-fragment-index="2" -->
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ### Why?
+          - Rapid development <!-- .element: class="fragment" data-fragment-index="0" -->
+          - Useful for Testing <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Helps our architecture and scalability <!-- .element: class="fragment" data-fragment-index="2" -->
+        </script>
+      </section>
+
+      <section data-markdown>
+        ### Rapid Development & Testing
+        ![](dev.png)
+      </section>
+      
+      <section data-markdown>
+        ### Rapid Development & Testing
+        ![](clippy-dev.png)
+      </section>
+      
+      <section data-markdown>
+        <script type="text/template">
+          ### Rapid Development & Testing
+          - Modules, loaders, etc.
+          - Less need for script runners
+
+          ![](clippy-test.png) <!-- .element: class="fragment" data-fragment-index="0" -->
+        </script>
+      </section>
+
+      <section data-markdown>
+        ### Architecture
+        ![](future.png)
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ### Architecture
+          - Browsers and JS runtimes are fast <!-- .element: class="fragment" data-fragment-index="0" -->
+          - Offloading UI state to client helps scalability <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Good way to kick-start APIs <!-- .element: class="fragment" data-fragment-index="2" -->
+          - Potential for continuous deployment of UI <!-- .element: class="fragment" data-fragment-index="3" -->
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ### Caveats
+          - Bundle size <!-- .element: class="fragment" data-fragment-index="0" -->
+          - JS ecosystem is super annoying <!-- .element: class="fragment" data-fragment-index="1" -->
+            - Frameworks and trends change all the time
+            - Lots and lots of similar tools
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ### Assumptions/Biases
+          - Multiple, smaller applications in APM are a plus <!-- .element: class="fragment" data-fragment-index="0" -->
+            (and match the reality of how folks are working) <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Code, templates, styles, and tests living together is helpful for quality and modularity <!-- .element: class="fragment" data-fragment-index="2" -->
+          - We can benefit from a loosely-coupled front-end architecture <!-- .element: class="fragment" data-fragment-index="3" -->
+          - We can improve our front-end testing <!-- .element: class="fragment" data-fragment-index="4" -->
+          - Customer expectations change, a rich and delightful UX keeps us ahead of the competition. <!-- .element: class="fragment" data-fragment-index="5" -->
+          - APIs and UI getting out of sync is not a (big) issue <!-- .element: class="fragment" data-fragment-index="5" -->
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ### Where we are at:
+          - Stage team is making good progress in this direction: Reports, Calendar, etc <!-- .element: class="fragment" data-fragment-index="0" -->
+            ![](li.png) <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Node/npm is available on CI and Production <!-- .element: class="fragment" data-fragment-index="2" -->
+          - Others? <!-- .element: class="fragment" data-fragment-index="3" -->
+        </script>
+      </section>
+
+      <section data-markdown>
+        # Fin
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      history: true,
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        {
+          src: 'plugin/markdown/marked.js'
+        },
+        {
+          src: 'plugin/markdown/markdown.js'
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true,
+          callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        }
+				]
+    });
+  </script>
+</body>
+
+</html>
