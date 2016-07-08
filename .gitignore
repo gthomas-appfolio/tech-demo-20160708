@@ -5,9 +5,6 @@
 .nyc_output
 .Spotlight-V100
 .Trashes
-*.ttf
-*.woff
-bundle.js
 coverage
 docs
 Icon?
