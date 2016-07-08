@@ -5,21 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Bundled JavaScript Apps</title>
-
-  <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/theme/black.css">
-
-  <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="lib/css/zenburn.css">
-  <style>
-    .reveal code {
-      font-family: 'Fira Code', monospace;
-      color: gray;
-    }
-    .reveal section img {
-      border: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -28,6 +13,7 @@
       <section data-markdown>
         ## Bundled JavaScript Apps
         (in APM)
+        #### Gary Thomas
       </section>
 
       <section data-markdown>
@@ -88,7 +74,7 @@
       </section>
 
       <section>
-        <a href="http://localhost:3333/" target="_blank">Example</a>
+        Demo
       </section>
 
       <section data-markdown>
@@ -136,7 +122,11 @@
         ### Rapid Development & Testing
         ![](clippy-dev.png)
       </section>
-      
+
+      <section>
+        Demo
+      </section>
+
       <section data-markdown>
         <script type="text/template">
           ### Rapid Development & Testing
@@ -201,34 +191,7 @@
     </div>
   </div>
 
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.js"></script>
-  <script>
-    Reveal.initialize({
-      history: true,
-
-      // More info https://github.com/hakimel/reveal.js#dependencies
-      dependencies: [
-        {
-          src: 'plugin/markdown/marked.js'
-        },
-        {
-          src: 'plugin/markdown/markdown.js'
-        },
-        {
-          src: 'plugin/notes/notes.js',
-          async: true
-        },
-        {
-          src: 'plugin/highlight/highlight.js',
-          async: true,
-          callback: function () {
-            hljs.initHighlightingOnLoad();
-          }
-        }
-				]
-    });
-  </script>
+  <script src="bundle.js"></script>
 </body>
 
 </html>
